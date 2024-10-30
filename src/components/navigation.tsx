@@ -15,7 +15,7 @@ import { IoPeopleOutline, IoPeopleSharp } from "react-icons/io5";
 const routes = [
   {
     label: "Home",
-    href: "",
+    href: "/",
     icon: GoHome,
     activeIcon: GoHomeFill,
   },
