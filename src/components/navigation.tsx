@@ -1,16 +1,12 @@
 import { cn } from "@/lib/utils";
 import { SettingsIcon, UsersIcon } from "lucide-react";
 import Link from "next/link";
-import {
-  GoCheckCircle,
-  GoCheckCircleFill,
-  GoHome,
-  GoHomeFill,
-} from "react-icons/go";
+import { GoHome, GoHomeFill } from "react-icons/go";
 
 import { CiBasketball } from "react-icons/ci";
 import { FaBasketball } from "react-icons/fa6";
 import { IoPeopleOutline, IoPeopleSharp } from "react-icons/io5";
+import { SiGithubcopilot } from "react-icons/si";
 
 const routes = [
   {
@@ -30,6 +26,18 @@ const routes = [
     href: "/press-conferences",
     icon: IoPeopleOutline,
     activeIcon: IoPeopleSharp,
+  },
+  {
+    label: "Optimization",
+    href: "/optimization",
+    icon: SiGithubcopilot,
+    activeIcon: SiGithubcopilot,
+  },
+  {
+    label: "Simplification",
+    href: "/simplification",
+    icon: SiGithubcopilot,
+    activeIcon: SiGithubcopilot,
   },
   {
     label: "Settings",
