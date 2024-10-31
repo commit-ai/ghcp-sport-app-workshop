@@ -1,8 +1,8 @@
 export default async function Simplification() {
   return (
     <div>
-      <h1 className="text-2xl font-bold">Optimization</h1>
-      <p>Optimization content goes here</p>
+      <h1 className="text-2xl font-bold">Simplification</h1>
+      <p>Simplification content goes here</p>
     </div>
   );
 }

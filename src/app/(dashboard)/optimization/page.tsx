@@ -6,7 +6,7 @@ export default function Optimization() {
   const [optimization, setOptimization] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // use effect to fetch the data from optimization api
+  // use effect to fetch the data from optimize api
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,8 +26,9 @@ export default function Optimization() {
   return (
     <div>
       <h1 className="text-2xl font-bold">Optimization</h1>
+      {loading && <p className="pb-3">Please wait while the page loads...</p>}
       {loading ? (
-        <p>Loading...</p>
+        <p className="text-2xl">Loading...</p>
       ) : (
         <div>
           <p>

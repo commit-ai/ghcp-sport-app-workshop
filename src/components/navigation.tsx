@@ -7,6 +7,7 @@ import { CiBasketball } from "react-icons/ci";
 import { FaBasketball } from "react-icons/fa6";
 import { IoPeopleOutline, IoPeopleSharp } from "react-icons/io5";
 import { SiGithubcopilot } from "react-icons/si";
+import { MdOutlineSportsHandball } from "react-icons/md";
 
 const routes = [
   {
@@ -20,6 +21,12 @@ const routes = [
     href: "/nba-scores",
     icon: CiBasketball,
     activeIcon: FaBasketball,
+  },
+  {
+    label: "Players Info",
+    href: "/players-info",
+    icon: MdOutlineSportsHandball,
+    activeIcon: MdOutlineSportsHandball,
   },
   {
     label: "Press Conferences",

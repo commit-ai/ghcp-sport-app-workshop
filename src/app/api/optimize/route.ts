@@ -23,9 +23,7 @@ export async function GET(request: NextRequest) {
   } while (swapped);
 
   const endTime = Date.now();
-  const executionTime = (endTime - startTime) / 1000; // Time in milliseconds
-  console.log(executionTime);
-  const res = `Execution time: ${executionTime} seconds`;
+  const executionTime = (endTime - startTime) / 1000; // Time in seconds
 
   return NextResponse.json(executionTime);
 }
