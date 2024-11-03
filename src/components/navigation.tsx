@@ -47,8 +47,8 @@ const routes = [
     activeIcon: SiGithubcopilot,
   },
   {
-    label: "Settings",
-    href: "/settings",
+    label: "Errors",
+    href: "/errors",
     icon: SettingsIcon,
     activeIcon: SettingsIcon,
   },

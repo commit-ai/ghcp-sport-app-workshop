@@ -66,7 +66,8 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
    - Enter the prompts: 
       - ```@github #web How do I create an API route in Next.js 14?```
       - ```@github #web What are Server Actions in Next.js 14?```
-      - ```@github #web How does the routing system work in Next.js 14?```  
+      - ```@github #web How does the routing system work in Next.js 14?```
+      - ```@github #web How to create a ui component in Next.js 14?```  
    > @Github provides the ability to search within your repository or across the web using Bing search integration. Feel free to ask additional questions to deepen your understanding of Next.js 14 technology.
 
 5. **Custom instructions** 
@@ -76,15 +77,24 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
    - Add natural language instructions to the file, in Markdown format.
      Whitespace between instructions is ignored, so the instructions can be written as a single paragraph, each on a new line, or separated by blank lines for legibility
 
-6. **@Github #web search for bing search 
 
-7. **Add Comments to Code:** 
+6. **Add Comments to Code:** 
    One of the common frustrations for developers is documenting their code properly, but don’t worry—Copilot is here to help!:
    - Open /src/api/nba-results/route.ts
    - Select the entire function, then press cmd+i on MacOS or ctrl+i on Windows. Next, type /doc.
     > GitHub Copilot will generate a documentation-style function declaration.
    - You can also use Copilot Chat to generate additional documentation. Open GitHub Copilot Chat and enter a prompt: ```Add comments to my code```
    - Add /docs and comments to other api routes
+  
+7. **Fix your code with GitHub Copilot**
+   GitHub Copilot assists in fixing code errors by analyzing context to suggest corrections, improving code accuracy and reducing debugging time. It quickly identifies and offers solutions for syntax errors, logic issues, and common mistakes.
+   - In the website's UI, navigate to the errors page at http://localhost:3000/errors
+   - You will see an error displayed both on the website's UI and in the VSCode console.
+   - In the Console Mark The Error and press right key in the mouse then choose the Copilot -> Explain this
+   - In the console, highlight the error, right-click, then select Copilot -> Explain this.
+   - Please fix the error and refresh the page, component location: /app/(dashboard)/errors/page.tsx
+   - Once you've fixed the error, enhance the component's style by selecting the form, pressing Ctrl + I on Windows or Cmd + I on MacOS, and asking Copilot to improve the style using TailwindCSS.
+   - See the results.
 
 8. **Lets Create a Player info feature, Under lib folder there is a a file called player-info.ts with nba player stats, you need to build an api route and react component based on player stats using file attach option in the chat, the route already exists under /src/app/api/player-info/route.ts**
    - In github copilot chat press the attach file and attach the player-info.ts - prompt: `Using the player-info, create a GET request to retrieve the player's id, name, team, weigh, height and position`, insert the content to /src/app/api/player-info/route.ts
