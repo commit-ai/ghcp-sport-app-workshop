@@ -91,24 +91,31 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
    - In the website's UI, navigate to the errors page at http://localhost:3000/errors
    - You will see an error displayed both on the website's UI and in the VSCode console.
    - In the Console Mark The Error and press right key in the mouse then choose the Copilot -> Explain this
-   - In the console, highlight the error, right-click, then select Copilot -> Explain this.
    - Please fix the error and refresh the page, component location: /app/(dashboard)/errors/page.tsx
    - Once you've fixed the error, enhance the component's style by selecting the form, pressing Ctrl + I on Windows or Cmd + I on MacOS, and asking Copilot to improve the style using TailwindCSS.
    - See the results.
 
-8. **Lets Create a Player info feature, Under lib folder there is a a file called player-info.ts with nba player stats, you need to build an api route and react component based on player stats using file attach option in the chat, the route already exists under /src/app/api/player-info/route.ts**
+8. **GitHub Copilot Code Reviews**
+   GitHub Copilot can review your code and provide feedback. Where possible, Copilot's feedback includes suggested changes which you can apply with a couple of clicks.
+   - Open the /app/(dashboard)/errors/page.tsx file 
+   - In MacOS press cmd + shift + p / in Windows press ctrl + shift + p to open the command pallette and prompt: GitHub Copilot: Review and comment
+   - GitHub Copilot will suggest code improvements, which you can choose to accept, reject, or skip to move on to the next suggestion. You'll also find the complete suggestions in the comments section.
+
+9.  **Generate Unit Tests using GitHub Copilot**
+   Test-driven development and unit test creation aren't always prioritized by development teams. However, GitHub Copilot can significantly reduce the effort required for these tasks by automatically generating unit tests.
+   - Open the coaches.py file located in the /flask directory at the root of the repository.
+   - The file contains a simple Flask API route that returns a list of NBA coaches.
+   - To run the app just run ```python coaches.py``` - You can test the api by GET request to http://localhost:8080/api/coaches
+
+10. **Lets Create a Player info feature, Under lib folder there is a a file called player-info.ts with nba player stats, you need to build an api route and react component based on player stats using file attach option in the chat, the route already exists under /src/app/api/player-info/route.ts**
    - In github copilot chat press the attach file and attach the player-info.ts - prompt: `Using the player-info, create a GET request to retrieve the player's id, name, team, weigh, height and position`, insert the content to /src/app/api/player-info/route.ts
    - You can test your api route with GET request: http://localhost:3000/api/player-info
    - Open /app/(dashboard)/player-info/page.tsx
    - Open the chat and prompt: `Using the player-info route (#file:route.ts ), retrieve and display a list of players along with their stats. Use Tailwind CSS classes and ShadCN components to present each player in a separate card, display only the name, team, weight, height and position.`
    - Open the http://localhost:3000/players-info and see the results, refactor the code if needed. 
   
-9.  **Fix Errors with GitHub Copilot:**
-   -  
-  
-10. Add A unit test to player info feature, 
 
-11. Add a Press conferences summarization feature using Azure OpenAI GPT-4o model, your goal is to summarize each of the press conferences that located in localhost:3000/press-conferences page.
+10. Add a Press conferences summarization feature using Azure OpenAI GPT-4o model, your goal is to summarize each of the press conferences that located in localhost:3000/press-conferences page.
    - Open /src/app/api/summarize/route.ts file 
    - You have a boilerplate for POST request
      - The request need to receives a transcription from the request
