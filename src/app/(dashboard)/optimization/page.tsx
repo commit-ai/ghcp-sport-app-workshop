@@ -11,7 +11,7 @@ export default function Optimization() {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:3001/api/optimize");
+        const response = await fetch("http://localhost:3000/api/optimize");
         const data = await response.json();
         setOptimization(data);
         setLoading(false);

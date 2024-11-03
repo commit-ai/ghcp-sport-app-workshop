@@ -61,7 +61,24 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
     - Optimization Suggestions: Seek suggestions for optimizing components, reducing bundle size, and improving server and client performance.
     ```
 
-4. **Add Comments to Code:** 
+4. **Explore NextJS technology with GitHub Copilot participants**
+   - In VSCode Open GitHub Copilot Chat
+   - Enter the prompts: 
+      - ```@github #web How do I create an API route in Next.js 14?```
+      - ```@github #web What are Server Actions in Next.js 14?```
+      - ```@github #web How does the routing system work in Next.js 14?```  
+   > @Github provides the ability to search within your repository or across the web using Bing search integration. Feel free to ask additional questions to deepen your understanding of Next.js 14 technology.
+
+5. **Custom instructions** 
+   You can enhance Copilot's chat responses by providing it with contextual details about your team's workflow, tools, or project specifics. Instead of manually including this context in every chat query, you can create a custom instructions file that automatically incorporates this information with every chat request.
+   - In the root of your repository, create a file named ```.github/copilot-instructions.md```
+     Create the .github directory if it does not already exist.
+   - Add natural language instructions to the file, in Markdown format.
+     Whitespace between instructions is ignored, so the instructions can be written as a single paragraph, each on a new line, or separated by blank lines for legibility
+
+6. **@Github #web search for bing search 
+
+7. **Add Comments to Code:** 
    One of the common frustrations for developers is documenting their code properly, but don’t worry—Copilot is here to help!:
    - Open /src/api/nba-results/route.ts
    - Select the entire function, then press cmd+i on MacOS or ctrl+i on Windows. Next, type /doc.
@@ -69,16 +86,19 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
    - You can also use Copilot Chat to generate additional documentation. Open GitHub Copilot Chat and enter a prompt: ```Add comments to my code```
    - Add /docs and comments to other api routes
 
-5. **Lets Create a Player info feature, Under lib folder there is a a file called player-info.ts with nba player stats, you need to build an api route and react component based on player stats using file attach option in the chat, the route already exists under /src/app/api/player-info/route.ts**
+8. **Lets Create a Player info feature, Under lib folder there is a a file called player-info.ts with nba player stats, you need to build an api route and react component based on player stats using file attach option in the chat, the route already exists under /src/app/api/player-info/route.ts**
    - In github copilot chat press the attach file and attach the player-info.ts - prompt: `Using the player-info, create a GET request to retrieve the player's id, name, team, weigh, height and position`, insert the content to /src/app/api/player-info/route.ts
    - You can test your api route with GET request: http://localhost:3000/api/player-info
    - Open /app/(dashboard)/player-info/page.tsx
    - Open the chat and prompt: `Using the player-info route (#file:route.ts ), retrieve and display a list of players along with their stats. Use Tailwind CSS classes and ShadCN components to present each player in a separate card, display only the name, team, weight, height and position.`
    - Open the http://localhost:3000/players-info and see the results, refactor the code if needed. 
   
-6. Add A unit test to player info feature, 
+9.  **Fix Errors with GitHub Copilot:**
+   -  
+  
+10. Add A unit test to player info feature, 
 
-7. Add a Press conferences summarization feature using Azure OpenAI GPT-4o model, your goal is to summarize each of the press conferences that located in localhost:3000/press-conferences page.
+11. Add a Press conferences summarization feature using Azure OpenAI GPT-4o model, your goal is to summarize each of the press conferences that located in localhost:3000/press-conferences page.
    - Open /src/app/api/summarize/route.ts file 
    - You have a boilerplate for POST request
      - The request need to receives a transcription from the request

@@ -34,7 +34,7 @@ const ConferenceCard = ({
   const onSummarize = async () => {
     setLoading(true);
     console.log("Summarize");
-    const response = await fetch("http://localhost:3001/api/summarize", {
+    const response = await fetch("http://localhost:3000/api/summarize", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
