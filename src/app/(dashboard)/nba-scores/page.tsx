@@ -1,7 +1,7 @@
 import React from "react";
 
 export default async function NBAScores() {
-  let data = await fetch("http://localhost:3001/api/nba-results");
+  let data = await fetch(`http://localhost:3001/api/nba-results`);
   let games = await data.json();
 
   const results = games.result;
