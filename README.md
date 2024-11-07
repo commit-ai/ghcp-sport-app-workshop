@@ -35,6 +35,8 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
       - What framework the repository using? 
       - Where the api routes handled out ?  
       - Which API routes the repository includes ?
+      - Where are the main ui components ? 
+      - What packages is the app using?
   
 2.  **Clone the repository to your local environment**
     - Open the repository in VSCode IDE.
@@ -87,10 +89,14 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
 6. **Add Comments to Code:** 
    One of the common frustrations for developers is documenting their code properly, but don’t worry—Copilot is here to help!:
    - Open /src/api/nba-results/route.ts
+   - Use GitHub Copilot Chat to gain insights into the code. Simply select the code and choose the /explain option for a detailed breakdown.
    - Select the entire function, then press cmd+i on MacOS or ctrl+i on Windows. Next, type /doc.
     > GitHub Copilot will generate a documentation-style function declaration.
    - You can also use Copilot Chat to generate additional documentation. Open GitHub Copilot Chat and enter a prompt: ```Add comments to my code```
    - Add /docs and comments to other api routes
+   > When adding comments to the code, ensure that GitHub Copilot Chat applies custom instructions with each request.
+   ![Alt text](image/custom-instructions.png)
+
   
 7. **Fix your code with GitHub Copilot**
    GitHub Copilot assists in fixing code errors by analyzing context to suggest corrections, improving code accuracy and reducing debugging time. It quickly identifies and offers solutions for syntax errors, logic issues, and common mistakes.
@@ -101,27 +107,43 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
    - Once you've fixed the error, enhance the component's style by selecting the form, pressing Ctrl + I on Windows or Cmd + I on MacOS, and asking Copilot to improve the style using TailwindCSS.
    - See the results.
 
-8. **GitHub Copilot Code Reviews**
+8. **Optimize Code With GitHub Copilot**
+    - Open Optimization page:
+    ![Alt text](image/optimization.png)
+    - Hold on until the page finishes loading.
+    - Your goal is to optimize the code using the o1-preview model
+    - Find the API route in the code (you can use #codebase to help locate it).
+    - Open GitHub Copilot Chat and switch the model to o1-preview.
+    - Select the code and type optimize to initiate the process.
+    - Make the necessary adjustments, then try accessing the page again.
+      > You can also use the gpt-4o model for optimization during testing.
+
+9.  **GitHub Copilot Code Reviews**
    GitHub Copilot can review your code and provide feedback. Where possible, Copilot's feedback includes suggested changes which you can apply with a couple of clicks.
    - Open the /app/(dashboard)/errors/page.tsx file 
    - In MacOS press cmd + shift + p / in Windows press ctrl + shift + p to open the command pallette and prompt: GitHub Copilot: Review and comment
    - GitHub Copilot will suggest code improvements, which you can choose to accept, reject, or skip to move on to the next suggestion. You'll also find the complete suggestions in the comments section.
 
-9.  **Generate Unit Tests using GitHub Copilot**
+10. **Generate Unit Tests using GitHub Copilot**
    Test-driven development and unit test creation aren't always prioritized by development teams. However, GitHub Copilot can significantly reduce the effort required for these tasks by automatically generating unit tests.
    - Open the coaches.py file located in the /flask directory at the root of the repository.
    - The file contains a simple Flask API route that returns a list of NBA coaches.
    - To run the app just run ```python coaches.py``` - You can test the api by GET request to http://localhost:8080/api/coaches
+   - Add unit tests to coaches.py by using prompt engineering techniques, such as the one-shot method. Provide a sample unit test structure example in Copilot Chat to guide the model, then proceed to generate the tests.
+   - Run the tests
+       > You can generate tests by typing /tests participant in GitHub Copilot Chat
 
-10. **Lets Create a Player info feature, Under lib folder there is a a file called player-info.ts with nba player stats, you need to build an api route and react component based on player stats using file attach option in the chat, the route already exists under /src/app/api/player-info/route.ts**
-   - In github copilot chat press the attach file and attach the player-info.ts - prompt: `Using the player-info, create a GET request to retrieve the player's id, name, team, weigh, height and position`, insert the content to /src/app/api/player-info/route.ts
+11. **Lets Create a Player info feature, Under lib folder there is a a file called player-info.ts with nba player stats, you need to build an api route and react component based on player stats using file attach option in the chat, the route already exists under /src/app/api/player-info/route.ts**
+   - In GitHub Chat, use @github #web participants to learn how to handle routes in a Next.js 14 application.
+   - Open /src/app/api/player-info/route.ts file
+   - Open GitHub Copilot Chat and attach the files /src/lib/player-info.ts and /src/app/(dashboard)/player-info/page.tsx as references. You can do this by using the #file participant command or by pressing the attachment button in the chat.
+   - Now, create a route based on the player-info file that fetches only the id, name, team, weight, height, and position properties. In the same command, ask Copilot to generate a component that displays a list of player information with all these fields,Ensure each player is displayed in a separate card.
+      > Use Tailwindcss and shadcn in your prompt to style the output
    - You can test your api route with GET request: http://localhost:3000/api/player-info
-   - Open /app/(dashboard)/player-info/page.tsx
-   - Open the chat and prompt: `Using the player-info route (#file:route.ts ), retrieve and display a list of players along with their stats. Use Tailwind CSS classes and ShadCN components to present each player in a separate card, display only the name, team, weight, height and position.`
    - Open the http://localhost:3000/players-info and see the results, refactor the code if needed. 
   
 
-10. **Add a Press conferences summarization feature using Azure OpenAI GPT-4o model**
+12. **Add a Press conferences summarization feature using Azure OpenAI GPT-4o model**
    Your goal is to summarize each of the press conferences that located in localhost:3000/press-conferences page.
    - Open /src/app/api/summarize/route.ts file 
    - You have a boilerplate for POST request
