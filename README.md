@@ -156,7 +156,7 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
       -  prompt: ```#codebase Where is the implementation of the Press Conference Card located in my code?``` the #codebase Searches through the codebase and pulls out relevant information for the query.
       -  Once GitHub Copilot locates the file, click on the file name in the chat to be redirected to it.
       -  The "Summarize with AI" button is already in your code but isn’t functional yet. Your goal is to use Copilot to create a handler function that calls the API route, summarizes the transcript, and displays it at the bottom of the card. As a bonus, try implementing a loading state to disable the button and show a loading indicator while the summary is being generated.
-      > You can implement the feature using either chat or inline code.
+         > You can implement this feature using either chat or inline code. Use @github #web to assist you in completing the task.
       - Test the ui feature. 
 
 
@@ -173,65 +173,75 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
 
 
 ## Task 2 - Build your first GitHub Copilot Extension
-Building your first GitHub Copilot extension involves creating custom features that enhance the capabilities of GitHub Copilot, tailored to specific tasks or workflows.
-1. Navigate to the /custom-copilot-extension folder.
-2. In the CLI, execute the command ```npm init -y``` to initialize an npm project.
-3. Create index.js file 
-4. Open GitHub Copilot chat and prompt: ```Add an ES module; create server using http; handle the get method```
-5. Insert the code to your index.js file 
-6. Install npm copilot extensions package: ```npm i @copilot-extensions/preview-sdk``` 
-7. You can follow the SDK github repo for more details: https://github.com/copilot-extensions/preview-sdk.js
-8. Customize your code to use the package ( example output ):
-   ```javascript
-   import http from 'http';
-   import { createTextEvent, createDoneEvent } from "@copilot-extensions/preview-sdk"
+1. Through a growing partner ecosystem, Copilot Extensions enables developers to build and deploy to the cloud in their natural language with their preferred tools and services, all without leaving the IDE or GitHub.com. With Copilot and now Copilot Extensions, developers can stay in the flow longer, uplevel their skills, and innovate faster.
+   - In VSCode please open the GitHub Copilot Chat 
+   - Type the prompt: ```Generate a Dockerfile to containerize a Next.js 14 application``` and see the results
+   - Now do the same using Docker extension ```@Docker Generate a Dockerfile to containerize a Next.js 14 application``` and test the results 
+   - The Docker extension offers additional capabilities for working with containers, including features such as:
+     - Learn about containerization
+     - Generate the correct Docker assets for your project
+     - Open a pull request with the assets to save you time
+     - Find project vulnerabilities with Docker Scout
+  
+2. Building your first GitHub Copilot extension involves creating custom features that enhance the capabilities of GitHub Copilot, tailored to specific tasks or workflows.
+   - Navigate to the /custom-copilot-extension folder.
+   - In the CLI, execute the command ```npm init -y``` to initialize an npm project.
+   - Create index.js file 
+   - Open GitHub Copilot chat and prompt: ```Add an ES module; create server using http; handle the get method```
+   - Insert the code to your index.js file 
+   - Install npm copilot extensions package: ```npm i @copilot-extensions/preview-sdk``` 
+   - You can follow the SDK github repo for more details: https://github.com/copilot-extensions/preview-sdk.js
+   - Customize your code to use the package ( example output ):
+      ```javascript
+      import http from 'http';
+      import { createTextEvent, createDoneEvent } from "@copilot-extensions/preview-sdk"
 
-   const server = http.createServer((req, res) => {
-   if (req.method === 'GET') {
-      res.writeHead(200, { 'Content-Type': 'text/plain' });
-      res.end('Hello, world!');
-   } else {
-      res.write(createTextEvent("Hello, world!"));
-      res.write(createTextEvent("This is my first Copilot extensions!"));
-      res.end(createDoneEvent());
-   }
-   });
+      const server = http.createServer((req, res) => {
+      if (req.method === 'GET') {
+         res.writeHead(200, { 'Content-Type': 'text/plain' });
+         res.end('Hello, world!');
+      } else {
+         res.write(createTextEvent("Hello, world!"));
+         res.write(createTextEvent("This is my first Copilot extensions!"));
+         res.end(createDoneEvent());
+      }
+      });
 
-   const PORT = 3000;
-   server.listen(PORT, () => {
-   console.log(`Server is running on port ${PORT}`);
-   });
-   ```
-9. Run ```npm start``` 
-10. In VSCode cli open PORTS TAB and forward the a port
+      const PORT = 3000;
+      server.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+      });
+      ```
+    - Run ```npm start``` 
+    - In VSCode cli open PORTS TAB and forward the a port
     ![Alt text](image/forward-port.png)
-11. Set the port to be publicly accessible.
-12. Go to your GitHub platform 
-13. Open settings
-    ![Alt text](image/github-settings.png)
-14. Select Developer settings
-15. Under GitHub Apps Click Create GitHub App: 
-    - Enter github app name ( must be unique )
-    - Describe your extension app
-    - Home page url: http://github.com
-    - Callback url: https://github.com
-    - Remove checkbox for Expire user authorization tokens
-    - Remove checkbox for Webhook -> Active
-    - Allow read-only permission to Account permissions -> Copilot Chat -> Access: Read-only
-      ![Alt text](image/copilot-permissions.png)  
-    - Click Create GitHub App
-16.  After the creation completed press Copilot Tab
-    - Choose App Type: Agent
-    - Url: Provide the url from port forwarding configuration in your idea cli
-      ![Alt text](image/port-forward.png)
-    - Result:
-    ![alt text](image/copilot-settings-url.png)
-17. Make sure your app is running
-18. In GitHub platform open the Github copilot chat and type @<your-extension-name> hello
-19. Authorize the app
-    ![Alt text](image/copilot-connect.png)
-20. Try the extension
-21. Bonus: Leverage your previous application task to call one of the API endpoints and return the results within your Copilot extension.
+    - Set the port to be publicly accessible.
+    - Go to your GitHub platform 
+    - Open settings
+      ![Alt text](image/github-settings.png)
+    - Select Developer settings
+    - Under GitHub Apps Click Create GitHub App: 
+      - Enter github app name ( must be unique )
+      - Describe your extension app
+      - Home page url: http://github.com
+      - Callback url: https://github.com
+      - Remove checkbox for Expire user authorization tokens
+      - Remove checkbox for Webhook -> Active
+      - Allow read-only permission to Account permissions -> Copilot Chat -> Access: Read-only
+        ![Alt text](image/copilot-permissions.png)  
+      - Click Create GitHub App
+    - After the creation completed press Copilot Tab
+      - Choose App Type: Agent
+      - Url: Provide the url from port forwarding configuration in your idea cli
+        ![Alt text](image/port-forward.png)
+      - Result:
+      ![alt text](image/copilot-settings-url.png)
+    - Make sure your app is running
+    - In GitHub platform open the Github copilot chat and type @<your-extension-name> hello
+    - Authorize the app
+      ![Alt text](image/copilot-connect.png)
+    - Try the extension
+    - Bonus: Leverage your previous application task to call one of the API endpoints and return the results within your Copilot extension.
     
      
 
