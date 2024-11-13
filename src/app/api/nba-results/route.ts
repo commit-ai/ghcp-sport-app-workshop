@@ -25,5 +25,12 @@ export async function GET(request: NextRequest) {
     );
   }
 
+  // let testGames = [
+  //   { game: "nba", result: "102-42" },
+  //   { game: "nba", result: "102-42" },
+  // ];
+
+  // console.log(testGames);
+
   return NextResponse.json(games);
 }
