@@ -41,6 +41,12 @@ const routes = [
     activeIcon: SiGithubcopilot,
   },
   {
+    label: "Optimization-o1",
+    href: "/optimize-o1",
+    icon: SiGithubcopilot,
+    activeIcon: SiGithubcopilot,
+  },
+  {
     label: "Simplification",
     href: "/simplification",
     icon: SiGithubcopilot,

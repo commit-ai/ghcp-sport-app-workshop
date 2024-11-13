@@ -108,15 +108,24 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
    - See the results.
 
 8. **Optimize Code With GitHub Copilot**
-    - Open Optimization page:
-    ![Alt text](image/optimization.png)
-    - Hold on until the page finishes loading.
-    - Your goal is to optimize the code using the o1-preview model
-    - Find the API route in the code (you can use #codebase to help locate it).
-    - Open GitHub Copilot Chat and switch the model to o1-preview.
-    - Select the code and type optimize to initiate the process.
-    - Make the necessary adjustments, then try accessing the page again.
-      > You can also use the gpt-4o model for optimization during testing.
+    - Optimize with GPT 4o:
+      - Open Optimization page:
+      ![Alt text](image/optimization.png)
+      - Hold on until the page finishes loading.
+      - Your goal is to optimize the code using the GPT 4o model
+      - Find the API route in the code (you can use #codebase to help locate it).
+      - Select the code and type optimize to initiate the process.
+      - Make the necessary adjustments, then try accessing the page again.
+   - Optimize with o1 model:
+      - Open Optimization-o1 page
+      ![Alt text](image/optimization2.png) 
+      - Hold on until the page finishes loading
+      - Your goal is to optimize the code using the o1-preview model
+      - Find the API route in the code (you can use #codebase to help locate it).
+      - Select the countToken function and press ctrl+i (windows) / cmd + i (macos) and switch to o1-preview model
+      - Type /optimize
+      - Make the necessary adjustments, then try accessing the page again
+      > You could start by optimizing the code with the GPT-4 model to evaluate the results.
 
 9.  **GitHub Copilot Code Reviews**
    GitHub Copilot can review your code and provide feedback. Where possible, Copilot's feedback includes suggested changes which you can apply with a couple of clicks.
