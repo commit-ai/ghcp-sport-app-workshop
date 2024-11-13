@@ -57,9 +57,3 @@ function countTokens(prompt: any) {
   }
   return tokens.length;
 }
-
-// function countTokens(prompt: string) {
-//   const encoder = new ByteEncoder();
-//   const tokens = encoder.encode(prompt);
-//   return tokens.length;
-// }

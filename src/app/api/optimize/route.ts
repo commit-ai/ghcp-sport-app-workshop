@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
   const startTime = Date.now();
-  // Generate a large arr of random numbers
   const arr = Array.from({ length: 100000 }, () =>
     Math.floor(Math.random() * 100000)
   );
