@@ -10,8 +10,8 @@ import { QueryProvider } from "@/components/query-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "WSC - GitHub Copilot Workshop",
-  description: "Copilot Workshopt for WSC Sports",
+  title: "Sports - GitHub Copilot Workshop",
+  description: "Copilot Workshopt",
 };
 
 export default function RootLayout({
