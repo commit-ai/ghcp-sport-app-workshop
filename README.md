@@ -1,24 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Pre-requisites
+1. Have Github Copilot license (at least Business)
+2. Install and Update Github Copilot & Github Copilot Chat extensions in your IDE
+3. Login to Copilot and make sure you get both code completions in the editor, and chat interactions 
+4. Install Node.js & npm
 
 # App Description
 
-Introducing GitHub Copilot for WSC, your dedicated NBA companion! GC brings you live NBA results and a unique feature: concise summaries of press conferences and post-game insights. Stay updated with key takeaways, player quotes, and team strategies, all in one place.
+Introducing GitHub Copilot, your dedicated NBA companion! GC brings you live NBA results and a unique feature: concise summaries of press conferences and post-game insights. Stay updated with key takeaways, player quotes, and team strategies, all in one place.
 
 With real-time updates and customizable notifications, GC is perfect for fans who want the latest NBA action and insider perspectives on each game’s impact and team dynamics.
 
@@ -38,11 +30,22 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
       - Where are the main ui components ? 
       - What packages is the app using?
   
-2.  **Clone the repository to your local environment**
-    - Open the repository in VSCode IDE.
+2.  **Clone the repository to your local environment and run the application**   
+    - Clone the repository
+    - Open the repository in your IDE.
     - Open the terminal -> View -> Terminal.
     - Install the npm packages - in the root app folder run ```npm install``` in the terminal to install all necessary packages
-    - Test the app by running ```npm run dev```
+    - Start the development server by running:
+      ```bash
+         npm run dev
+         # or
+         yarn dev
+         # or
+         pnpm dev
+         # or
+         bun dev
+         ```
+    - Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
   
 3. **Role Prompting:**
    GitHub Copilot Chat role prompting is a feature that allows developers to define a specific role for Copilot, guiding it to provide more relevant and context-aware assistance. By setting a role prompt, you outline your development goals, project context, and specific tasks, so Copilot tailors its suggestions, code snippets, and guidance to better match your needs. This makes Copilot’s responses more effective, particularly in complex projects or when working with specialized tools or frameworks.
@@ -114,6 +117,7 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
       - Hold on until the page finishes loading.
       - Your goal is to optimize the code using the GPT 4o model
       - Find the API route in the code (you can use #codebase to help locate it).
+      - **Choose chat model GPT-4o**
       - Select the code and type optimize to initiate the process.
       - Make the necessary adjustments, then try accessing the page again.
    - Optimize with o1 model:
@@ -122,7 +126,7 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
       - Hold on until the page finishes loading
       - Your goal is to optimize the code using the o1-preview model
       - Find the API route in the code (you can use #codebase to help locate it).
-      - Select the countToken function and press ctrl+i (windows) / cmd + i (macos) and switch to o1-preview model
+      - Select the countToken function and press ctrl+i (windows) / cmd + i (macos) and **switch to o1-preview model**
       - Type /optimize
       - Make the necessary adjustments, then try accessing the page again
       > You could start by optimizing the code with the GPT-4 model to evaluate the results.
@@ -168,20 +172,13 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
          > You can implement this feature using either chat or inline code. Use @github #web to assist you in completing the task.
       - Test the ui feature. 
 
+## Task 2 - Copilot Agent Mode
+**<span style="color: red;">This is only supported in vscode insiders</span>**
 
-11. **GitHub Copilot Extensions**
-   Through a growing partner ecosystem, Copilot Extensions enables developers to build and deploy to the cloud in their natural language with their preferred tools and services, all without leaving the IDE or GitHub.com. With Copilot and now Copilot Extensions, developers can stay in the flow longer, uplevel their skills, and innovate faster.
-   - In VSCode please open the GitHub Copilot Chat 
-   - Type the prompt: ```Generate a Dockerfile to containerize a Next.js 14 application``` and see the results
-   - Now do the same using Docker extension ```@Docker Generate a Dockerfile to containerize a Next.js 14 application``` and test the results 
-   - The Docker extension offers additional capabilities for working with containers, including features such as:
-     - Learn about containerization
-     - Generate the correct Docker assets for your project
-     - Open a pull request with the assets to save you time
-     - Find project vulnerabilities with Docker Scout
+1.
+2.
 
-
-## Task 2 - Build your first GitHub Copilot Extension
+## Task 3 - Build your first GitHub Copilot Extension
 1. Through a growing partner ecosystem, Copilot Extensions enables developers to build and deploy to the cloud in their natural language with their preferred tools and services, all without leaving the IDE or GitHub.com. With Copilot and now Copilot Extensions, developers can stay in the flow longer, uplevel their skills, and innovate faster.
    - In VSCode please open the GitHub Copilot Chat 
    - Type the prompt: ```Generate a Dockerfile to containerize a Next.js 14 application``` and see the results

@@ -5,17 +5,13 @@ export default async function Home() {
     <div className=" p-4 h-full">
       <div className="flex justify-center pb-10">
         <Image
-          src="/copilotimage.avif"
+          src="/github-copilot-main.jpeg"
           alt="copilot"
           width="1024"
           height="768"
         />
       </div>
       <div>
-        <div className="flex flex-row">
-          <h1 className="text-2xl font-bold pr-3">Dear</h1>
-          <Image src="/outbrain.png" alt="logo" width={164} height={48} />
-        </div>
         <p className="text-lg">
           We are thrilled to welcome you to our event and are honored to have
           you lead the Advanced GitHub Copilot Hands-on Workshop. Your expertise
