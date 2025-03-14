@@ -6,8 +6,8 @@ export default async function NBAScores() {
   const params = {
     met: "Fixtures",
     APIkey: process.env.NEXT_PUBLIC_NBA_API_KEY,
-    from: "2024-10-01",
-    to: "2024-10-29",
+    from: "2025-03-01",
+    to: "2025-03-14",
     leagueId: 766,
   };
   const urlWithParams = `${url}?${new URLSearchParams(

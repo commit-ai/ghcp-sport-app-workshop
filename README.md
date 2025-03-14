@@ -37,16 +37,7 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
     - Open the repository in your IDE.
     - Open the terminal -> View -> Terminal.
     - Install the npm packages - in the root app folder run ```npm install``` in the terminal to install all necessary packages
-    - Start the development server by running:
-      ```bash
-         npm run dev
-         # or
-         yarn dev
-         # or
-         pnpm dev
-         # or
-         bun dev
-         ```
+    - Start the development server by running ```npm run dev ```
     - Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 ---
