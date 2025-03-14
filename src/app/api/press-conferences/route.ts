@@ -1,5 +1,31 @@
 import { NextRequest, NextResponse } from "next/server";
 
+/**
+ * Retrieves a list of press conferences from the NBA.
+ * 
+ * This endpoint returns an array of press conference objects containing details about
+ * various NBA post-game and pre-game conferences. Each conference includes:
+ * - Title of the press conference
+ * - Date and time of the conference
+ * - Location where it was held
+ * - Full transcription of the conference
+ * 
+ * @param request - The incoming Next.js request object
+ * @returns A JSON response containing an array of press conference objects
+ * 
+ * @example
+ * // Example response structure:
+ * [
+ *   {
+ *     title: string,
+ *     date: string, // Format: "YYYY-MM-DD"
+ *     time: string, // Format: "HH:MM AM/PM"
+ *     location: string,
+ *     transcription: string
+ *   },
+ *   ...
+ * ]
+ */
 export async function GET(request: NextRequest) {
   const pressConferences = [
     {
