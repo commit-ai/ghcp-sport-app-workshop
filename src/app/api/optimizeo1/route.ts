@@ -5,6 +5,28 @@ import ByteEncoder from "byte-encoder";
 // Import the performance API for benchmarking
 import { performance } from "perf_hooks";
 
+/**
+ * Handles GET requests to measure token count and performance of a predefined NBA app prompt.
+ * 
+ * This endpoint processes a hardcoded prompt describing a comprehensive NBA game-tracking
+ * application and measures:
+ * - The number of tokens in the prompt using a token counting function
+ * - The execution time of the token counting operation
+ * 
+ * @param request - The incoming Next.js request object
+ * @returns {Promise<NextResponse>} JSON response containing:
+ *   - prompt: The original NBA app description text
+ *   - tokenCount: Number of tokens in the prompt
+ *   - executionTime: Time taken to count tokens (in milliseconds)
+ * 
+ * @example
+ * Response format:
+ * {
+ *   prompt: string,
+ *   tokenCount: number,
+ *   executionTime: string
+ * }
+ */
 export async function GET(request: NextRequest) {
   const prompt = `
 Imagine an ultra-comprehensive NBA game-tracking app, crafted specifically for die-hard fans, fantasy sports players, and analytics enthusiasts. This app goes far beyond simple score updates, delivering real-time, in-depth coverage of every NBA game with a fully immersive experience that combines live data, interactive features, and advanced analytics.
