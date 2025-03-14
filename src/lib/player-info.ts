@@ -68,5 +68,19 @@ export const playerInfo = [
       "assistsPerGame": 0,
       "reboundsPerGame": 0
     }
+  },
+  {
+    "id": 6,
+    "name": "Tamir Blatt",
+    "team": "Maccabi Tel Aviv",
+    "position": "Guard",
+    "height": "Not specified",
+    "weight": "Not specified",
+    "birthDate": "Not specified",
+    "stats": {
+      "pointsPerGame": 0,
+      "assistsPerGame": 0,
+      "reboundsPerGame": 0
+    }
   }
 ];
