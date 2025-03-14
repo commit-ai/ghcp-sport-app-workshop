@@ -47,12 +47,6 @@ const routes = [
     activeIcon: SiGithubcopilot,
   },
   {
-    label: "Simplification",
-    href: "/simplification",
-    icon: SiGithubcopilot,
-    activeIcon: SiGithubcopilot,
-  },
-  {
     label: "Errors",
     href: "/errors",
     icon: SettingsIcon,
