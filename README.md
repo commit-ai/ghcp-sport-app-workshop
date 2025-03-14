@@ -158,9 +158,11 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
    **<span style="color: yellow;">This task is only supported in vscode</span>**
 
    GitHub Copilot can review your code and provide feedback. Where possible, Copilot's feedback includes suggested changes which you can apply with a couple of clicks.
-   - Open the /app/(dashboard)/errors/page.tsx file 
-   - In MacOS press cmd + shift + p / in Windows press ctrl + shift + p to open the command pallette and prompt: GitHub Copilot: Review and comment
+   - Open the /app/api/nba-results/page.tsx file 
+   - Select all this file code, Right-click mouse on the code, Choose menu 'Copilot -> Review and Comment'
    - GitHub Copilot will suggest code improvements, which you can choose to accept, reject, or skip to move on to the next suggestion. You'll also find the complete suggestions in the comments section.
+
+   ![Alt text](image/review-and-comment-comments.png)
 
 ---
 
