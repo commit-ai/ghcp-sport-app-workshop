@@ -308,4 +308,3 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
 
 
 
-
