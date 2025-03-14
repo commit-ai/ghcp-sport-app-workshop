@@ -115,11 +115,11 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
 7. **Fix your code with GitHub Copilot**
    
    GitHub Copilot assists in fixing code errors by analyzing context to suggest corrections, improving code accuracy and reducing debugging time. It quickly identifies and offers solutions for syntax errors, logic issues, and common mistakes.
-   - In the website's UI, navigate to the errors page at http://localhost:3000/errors
-   - You will see an error displayed both on the website's UI and in the VSCode console.
-   - In the Console Mark The Error and press right key in the mouse then choose the Copilot -> Explain this
-   - Please fix the error and refresh the page, component location: /app/(dashboard)/errors/page.tsx
-   - Once you've fixed the error, enhance the component's style by selecting the form, pressing Ctrl + I on Windows or Cmd + I on MacOS, and asking Copilot to improve the style using TailwindCSS.
+   - In the website's UI, navigate to the errors page at http://localhost:3000/errors - this is actually an 'Add NBA player' page, although, when trying to create a new player, there's an error
+   - Fill in the form and click on 'Create player' button - you will see an error (404) displayed both in the the IDE console and in the website UI (browser console).
+   - Ask Copilot Chat to /explain the error "/explain POST /api/players 404", with the context of /errors/page.tsx
+   - Ask Copilot Chat to fix the error with the right context (ask to create the api, while providing the page and players data file - player-info.ts). You should now be able to add players (look at player-info.ts to see the new added player).
+   - Once you've fixed the error, enhance the form component's style by selecting the form (in /errors/page.tsx), pressing Ctrl + I on Windows or Cmd + I on MacOS, and asking Copilot to improve the style using TailwindCSS.
    - See the results.
 
 ---

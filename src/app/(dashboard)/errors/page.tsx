@@ -43,6 +43,7 @@ const ErrorPageFixing = () => {
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit}>
+        <div className="space-y-4">
           <div>
             <label htmlFor="name">Name:</label>
             <input
@@ -51,6 +52,7 @@ const ErrorPageFixing = () => {
               value={playerName}
               onChange={(e) => setPlayerName(e.target.value)}
               required
+              className="border border-gray-400"
             />
           </div>
           <div>
@@ -61,6 +63,7 @@ const ErrorPageFixing = () => {
               value={playerPosition}
               onChange={(e) => setPlayerPosition(e.target.value)}
               required
+              className="border border-gray-400"
             />
           </div>
           <div>
@@ -71,9 +74,13 @@ const ErrorPageFixing = () => {
               value={playerTeam}
               onChange={(e) => setPlayerTeam(e.target.value)}
               required
+              className="border border-gray-400"
             />
           </div>
-          <button type="submit">Create Player</button>
+          <button 
+            type="submit"
+            className="border border-gray-400 bg-blue-500 text-white">Create Player</button>
+          </div>
         </form>
       </CardContent>
       <CardFooter>
