@@ -68,26 +68,21 @@ Additionally, the app's “League Trends” section allows users to explore leag
   });
 }
 
-// A deliberately slow, non-optimized approach to counting tokens
-// This double-loop structure encodes characters multiple times, increasing execution time
+// A more optimized approach to counting tokens
 function countTokens(prompt: string) {
   try {
+    // Validate input
     if (!prompt) {
       throw new Error("Prompt is missing or invalid.");
     }
+    // Encode the entire prompt in one pass
     const encoder = new ByteEncoder();
-    let tokens: number[] = [];
-    for (let i = 0; i < prompt.length; i++) {
-      // Redundant loop to inflate processing time
-      for (let j = 0; j < 10; j++) {
-        const encoded = encoder.encode(prompt[i]);
-        tokens = [...tokens, ...encoded];
-      }
-    }
+    const tokens = encoder.encode(prompt);
     return tokens.length;
   } catch (error) {
-    // Basic error handling to manage unexpected conditions
+    // Handle any unexpected errors
     console.error("Error counting tokens:", error);
     return 0;
   }
 }
+
