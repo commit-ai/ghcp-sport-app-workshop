@@ -126,25 +126,30 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
 
 8. **Optimize Code With GitHub Copilot**
     
+    GitHub Copilot Chat can help you optimize code (refactor behavior without changing functionallity). In the following task, you will optimize 2 inefficient code logics, using different Chat models.
+    
     - Optimize with GPT 4o:
-      - Open Optimization page:
-      ![Alt text](image/optimization.png)
-      - Hold on until the page finishes loading.
+      - Click on 'Optimization' page in the web app. left menu 
+      - Wait until the page finishes loading (might take ~10s).
       - Your goal is to optimize the code using the GPT 4o model
       - Find the API route in the code (you can use #codebase to help locate it).
       - **Choose chat model GPT-4o**
-      - Select the code and type optimize to initiate the process.
-      - Make the necessary adjustments, then try accessing the page again.
+      ![Alt text](image/chat-model-selection.png)
+      - Ask Copilot Chat to "optimize this code" while the relevant route.ts is in the chat context.
+      - Make the necessary adjustments, then reload the page and make sure it loads fast.
+
    - Optimize with o1 model:
-      - Open Optimization-o1 page
-      ![Alt text](image/optimization2.png) 
-      - Hold on until the page finishes loading
+      - Click on 'Optimization-o1' page in the web app. left menu 
+      - Wait until the page finishes loading
       - Your goal is to optimize the code using the o1-preview model
       - Find the API route in the code (you can use #codebase to help locate it).
-      - Select the countToken function and press ctrl+i (windows) / cmd + i (macos) and **switch to o1-preview model**
+      - Select the countTokens function code and open inline chat (press ctrl+i (windows) / cmd + i (macos)) and **switch to o1-preview model**
       - Type /optimize
       - Make the necessary adjustments, then try accessing the page again
-      > You could start by optimizing the code with the GPT-4 model to evaluate the results.
+      
+      > Did you know? 
+      **o1-preview** model is focused on advanced reasoning and solving complex problems, in particular in math and science. It responds more slowly than the GPT-4o model.
+      **o3-mini** model is the next generation of reasoning models, following from o1 and o1-mini. The o3-mini model outperforms o1 on coding benchmarks with response times that are comparable to o1-mini, providing improved quality at nearly the same latency. It is best suited for code generation and small context operations
 
 ---
 
