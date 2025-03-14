@@ -18,18 +18,20 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
 
 ## Task 1 - Copilot Sport Application with GitHub Copilot
 
-1. **Imagine you are a new developer that hired to developer team, you need to explore the project and understand the main components**
+1. **Imagine you are a new developer who just joined the team. You need to explore the project and understand its main components**
 
-   - Open a GitHub platform and access your repository
-   - Press on GitHub Copilot icon to open a chat
+   - Open github.com platform and access your repository
+   - Click on the GitHub Copilot icon to open a chat
    - Explore the app by asking a questions like:
       - Can you tell me about this repository? 
-      - What framework the repository using? 
-      - Where the api routes handled out ?  
-      - Which API routes the repository includes ?
-      - Where are the main ui components ? 
-      - What packages is the app using?
-  
+      - What framework is this repository using? 
+      - Where are the API routes handled?
+      - Which API routes are included in this repository?
+      - Where are the main UI components?
+      - What packages does the app use?
+
+---
+
 2.  **Clone the repository to your local environment and run the application**   
     - Clone the repository
     - Open the repository in your IDE.
@@ -46,8 +48,11 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
          bun dev
          ```
     - Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
-  
+
+---
+
 3. **Role Prompting:**
+   
    GitHub Copilot Chat role prompting is a feature that allows developers to define a specific role for Copilot, guiding it to provide more relevant and context-aware assistance. By setting a role prompt, you outline your development goals, project context, and specific tasks, so Copilot tailors its suggestions, code snippets, and guidance to better match your needs. This makes Copilot’s responses more effective, particularly in complex projects or when working with specialized tools or frameworks.
    - Open GitHub Copilot Chat 
    - Prompt: 
@@ -68,17 +73,29 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
     - Optimization Suggestions: Seek suggestions for optimizing components, reducing bundle size, and improving server and client performance.
     ```
 
+---
+
 4. **Explore NextJS technology with GitHub Copilot participants**
-   - In VSCode Open GitHub Copilot Chat
-   - Enter the prompts: 
-      - ```@github #web How do I create an API route in Next.js 14?```
-      - ```@github #web What are Server Actions in Next.js 14?```
-      - ```@github #web How does the routing system work in Next.js 14?```
-      - ```@github #web How to create a ui component in Next.js 14?```  
-   > @Github provides the ability to search within your repository or across the web using Bing search integration. Feel free to ask additional questions to deepen your understanding of Next.js 14 technology.
+   - GitHub Copilot provides the ability (using @github participant) to search within your repository or across the web using Bing search integration. Feel free to ask additional questions to deepen your understanding of Next.js 14 technology.
+   - Open GitHub Copilot Chat
+   - Manually write the following prompts, one by one (do not copy-paste): 
+      - ```@github How do I create an API route in Next.js 14?```
+      - ```@github What are Server Actions in Next.js 14?```
+      - ```@github How does the routing system work in Next.js 14?```
+      - ```@github How to create a ui component in Next.js 14?```  
+   > In vscode you can specify @github #web to search the internet with bing.
+   
+      You can tell that Copilot chat used bing search if you see bing as search resource:
+   ![image](image/copilot-bing-search.png)
+
+   > Troubleshoot: if for some reason you can't see bing used in the search reasults, try to prompt it with @github search the web for... 
+---
 
 5. **Custom instructions** 
-   You can enhance Copilot's chat responses by providing it with contextual details about your team's workflow, tools, or project specifics. Instead of manually including this context in every chat query, you can create a custom instructions file that automatically incorporates this information with every chat request.
+   
+   **<span style="color: yellow;">This task is only supported in vscode and visual studio</span>**
+   
+   You can enhance Copilot's chat responses by providing it with contextual details about your team's workflow, tools, or project specifics. Instead of manually including this context in every chat query, you can create a custom instructions file that automatically incorporates this information **with every chat request**.
    - In the root of your repository, create a file named ```.github/copilot-instructions.md```
      Create the .github directory if it does not already exist.
    - Add natural language instructions to the file, in Markdown format.
@@ -87,9 +104,11 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
      - ```For API routes, use Next.js 14's enhanced API route capabilities. Aim for suggestions that optimize data fetching from our backend services, like fetching game data and user statistics, while keeping it secure and performant.```
      - ```Always include comments with code suggestions.```
      - ```Incorporate error handling in all suggestions, with clear messaging for potential issues and recovery steps to ensure a robust and user-friendly application```
-
+   - In the next task, you'll see how these instructions are used as reference
+---
 
 6. **Add Comments to Code:** 
+   
    One of the common frustrations for developers is documenting their code properly, but don’t worry—Copilot is here to help!:
    - Open /src/api/nba-results/route.ts
    - Use GitHub Copilot Chat to gain insights into the code. Simply select the code and choose the /explain option for a detailed breakdown.
@@ -100,8 +119,10 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
    > When adding comments to the code, ensure that GitHub Copilot Chat applies custom instructions with each request.
    ![Alt text](image/custom-instructions.png)
 
+---
   
 7. **Fix your code with GitHub Copilot**
+   
    GitHub Copilot assists in fixing code errors by analyzing context to suggest corrections, improving code accuracy and reducing debugging time. It quickly identifies and offers solutions for syntax errors, logic issues, and common mistakes.
    - In the website's UI, navigate to the errors page at http://localhost:3000/errors
    - You will see an error displayed both on the website's UI and in the VSCode console.
@@ -110,7 +131,10 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
    - Once you've fixed the error, enhance the component's style by selecting the form, pressing Ctrl + I on Windows or Cmd + I on MacOS, and asking Copilot to improve the style using TailwindCSS.
    - See the results.
 
+---
+
 8. **Optimize Code With GitHub Copilot**
+    
     - Optimize with GPT 4o:
       - Open Optimization page:
       ![Alt text](image/optimization.png)
@@ -131,11 +155,18 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
       - Make the necessary adjustments, then try accessing the page again
       > You could start by optimizing the code with the GPT-4 model to evaluate the results.
 
-9.  **GitHub Copilot Code Reviews**
+---
+
+9. **GitHub Copilot Code Reviews**
+   
+   **<span style="color: yellow;">This task is only supported in vscode</span>**
+
    GitHub Copilot can review your code and provide feedback. Where possible, Copilot's feedback includes suggested changes which you can apply with a couple of clicks.
    - Open the /app/(dashboard)/errors/page.tsx file 
    - In MacOS press cmd + shift + p / in Windows press ctrl + shift + p to open the command pallette and prompt: GitHub Copilot: Review and comment
    - GitHub Copilot will suggest code improvements, which you can choose to accept, reject, or skip to move on to the next suggestion. You'll also find the complete suggestions in the comments section.
+
+---
 
 10. **Generate Unit Tests using GitHub Copilot**
    Test-driven development and unit test creation aren't always prioritized by development teams. However, GitHub Copilot can significantly reduce the effort required for these tasks by automatically generating unit tests.
@@ -146,8 +177,10 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
    - Run the tests
        > You can generate tests by typing /tests participant in GitHub Copilot Chat
 
+---
+
 11. **Lets Create a Player info feature, Under lib folder there is a a file called player-info.ts with nba player stats, you need to build an api route and react component based on player stats using file attach option in the chat, the route already exists under /src/app/api/player-info/route.ts**
-   - In GitHub Chat, use @github #web participants to learn how to handle routes in a Next.js 14 application.
+   - In GitHub Copilot Chat, use @github chat participant to learn how to handle routes in a Next.js 14 application.
    - Open /src/app/api/player-info/route.ts file
    - Open GitHub Copilot Chat and attach the files /src/lib/player-info.ts and /src/app/(dashboard)/player-info/page.tsx as references. You can do this by using the #file participant command or by pressing the attachment button in the chat.
    - Now, create a route based on the player-info file that fetches only the id, name, team, weight, height, and position properties. In the same command, ask Copilot to generate a component that displays a list of player information with all these fields,Ensure each player is displayed in a separate card.
@@ -155,6 +188,7 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
    - You can test your api route with GET request: http://localhost:3000/api/player-info
    - Open the http://localhost:3000/players-info and see the results, refactor the code if needed. 
   
+---
 
 12. **Add a Press conferences summarization feature using Azure OpenAI GPT-4o model**
    Your goal is to summarize each of the press conferences that located in localhost:3000/press-conferences page.
@@ -173,10 +207,23 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
       - Test the ui feature. 
 
 ## Task 2 - Copilot Agent Mode
-**<span style="color: red;">This is only supported in vscode insiders</span>**
+**<span style="color: yellow;">This task is only supported in vscode insiders</span>**
 
-1.
-2.
+1.  **Add Stadiums feature using GitHub Copilot Agents** 
+    GitHub Copilot’s new agent mode is capable of iterating on its own code, recognizing errors, and fixing them automatically. It can suggest terminal commands and ask you to execute them. It also analyzes run-time errors with self-healing capabilities.
+    -  Open GitHub Copilot Chat, select Copilot Edits Tab, from the drop down menu select Agent mode and select Claude 3.5 Sonnet model.
+    -  Include a prompt to generate a new Stadium feature—clearly specify the exact instructions for your desired action. For example:
+       
+      ```
+      Let's enhance this application by adding an NBA Stadiums page.
+       1. First, create a JSON file containing sample stadium data.
+       2. Then, set up a Next.js API route to serve the stadium data from the JSON file.
+       3. Build a React component that displays the stadium information as cards.
+       4. Add a navigation link to this new component in the main navigation page.
+       5. Use Tailwind CSS and ShadCN components to style the UI.
+     ```
+     - Review the output and monitor live changes in your codebase. The agent will analyze your file structure, determine appropriate locations for adding files, and handle the additions accordingly. Be sure to accept or reject each step suggested by the agent.
+     - Open the app to verify that the Stadiums navigation tab, the REST API endpoint, and the corresponding React component have been successfully added.
 
 ## Task 3 - Build your first GitHub Copilot Extension
 1. Through a growing partner ecosystem, Copilot Extensions enables developers to build and deploy to the cloud in their natural language with their preferred tools and services, all without leaving the IDE or GitHub.com. With Copilot and now Copilot Extensions, developers can stay in the flow longer, uplevel their skills, and innovate faster.
