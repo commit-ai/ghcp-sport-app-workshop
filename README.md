@@ -178,11 +178,19 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
 ---
 
 11. **Lets Create a Player info feature, Under lib folder there is a a file called player-info.ts with nba player stats, you need to build an api route and react component based on player stats using file attach option in the chat, the route already exists under /src/app/api/player-info/route.ts**
+   
+      **Use Copilot edits in vscode and visual studio**
+   
    - In GitHub Copilot Chat, use @github chat participant to learn how to handle routes in a Next.js 14 application.
-   - Open /src/app/api/player-info/route.ts file
-   - Open GitHub Copilot Chat and attach the files /src/lib/player-info.ts and /src/app/(dashboard)/player-info/page.tsx as references. You can do this by using the #file participant command or by pressing the attachment button in the chat.
-   - Now, create a route based on the player-info file that fetches only the id, name, team, weight, height, and position properties. In the same command, ask Copilot to generate a component that displays a list of player information with all these fields,Ensure each player is displayed in a separate card.
-      > Use Tailwindcss and shadcn in your prompt to style the output
+   - Add the 3 relevant files to the Chat context (attach files or drag&drop):       
+      1. /src/app/api/player-info/route.ts  - api to fetch players data
+      2. /src/lib/player-info.ts - players data
+      3. /src/app/(dashboard)/player-info/page.tsx - players info page
+
+   - Now ask Copilot Chat (or Copilot Edits) to: 
+   
+      Create a route based on the player-info file that fetches only the id, name, team, weight, height, and position properties. Generate a component that displays a list of player information with all these fields, Ensure each player is displayed in a separate card. Use Tailwindcss and shadcn in your prompt to style the output
+
    - You can test your api route with GET request: http://localhost:3000/api/player-info
    - Open the http://localhost:3000/players-info and see the results, refactor the code if needed. 
   
