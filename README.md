@@ -224,17 +224,8 @@ With real-time updates and customizable notifications, GC is perfect for fans wh
      - Open the app to verify that the Stadiums navigation tab, the REST API endpoint, and the corresponding React component have been successfully added.
 
 ## Task 3 - Build your first GitHub Copilot Extension
-1. Through a growing partner ecosystem, Copilot Extensions enables developers to build and deploy to the cloud in their natural language with their preferred tools and services, all without leaving the IDE or GitHub.com. With Copilot and now Copilot Extensions, developers can stay in the flow longer, uplevel their skills, and innovate faster.
-   - In VSCode please open the GitHub Copilot Chat 
-   - Type the prompt: ```Generate a Dockerfile to containerize a Next.js 14 application``` and see the results
-   - Now do the same using Docker extension ```@Docker Generate a Dockerfile to containerize a Next.js 14 application``` and test the results 
-   - The Docker extension offers additional capabilities for working with containers, including features such as:
-     - Learn about containerization
-     - Generate the correct Docker assets for your project
-     - Open a pull request with the assets to save you time
-     - Find project vulnerabilities with Docker Scout
-  
-2. Building your first GitHub Copilot extension involves creating custom features that enhance the capabilities of GitHub Copilot, tailored to specific tasks or workflows.
+
+1. Building your first GitHub Copilot extension involves creating custom features that enhance the capabilities of GitHub Copilot, tailored to specific tasks or workflows.
    - Navigate to the /custom-copilot-extension folder.
    - In the CLI, execute the command ```npm init -y``` to initialize an npm project.
    - Create index.js file 
